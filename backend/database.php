@@ -7,6 +7,7 @@
         */
         //conexion Base de datos hosgator
         '162.241.61.135', 'mojitosc_castelll0009','Castillo1997177-','mojitosc_mojitos-db'
+        //'localhost','root','',
     );
     
     /*

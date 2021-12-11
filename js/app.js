@@ -70,12 +70,13 @@ $(document).ready(function() {
   // Fetching Products
   function fetchProducts() {
     $.ajax({
-      url: 'backend/products-list.php',
+      url: 'backend/gym_usuariosList.php',
       type: 'GET',
       success: function(response) {
+        console.log("response"+response); 
         const products = JSON.parse(response);
         let template = '';
-        let template_nuevo_producto = '';
+      //  let template_nuevo_producto = '';
         //console.log(products);
         products.forEach(product => {
           template += `
@@ -83,14 +84,15 @@ $(document).ready(function() {
                     <td>${product.id}</td>
                     <td>
                     <a href="#" class="product-item">
-                      ${product.nombre} 
+                      ${product.nombre_usuario} 
                     </a>
                     </td>                   
-                    <td>${product.precio}</td>
-                    <td>${product.descripcion}</td>
-                    <td>${product.propiedades}</td>
-                    <td>${product.usos}</td>
-                    <td>${product.recetas}</td>
+                    <td>${product.contrasena}</td>
+                    <td>${product.telefono}</td>
+                    <td>${product.nombre}</td>
+                    <td>${product.cedula}</td>
+                    <td>${product.nivel}</td>
+                    <td>${product.correo}</td>
                     <td>
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
@@ -101,10 +103,11 @@ $(document).ready(function() {
                     </td>
                   </tr>
                 `                
+               /*
                 //ahora creamos una template para la IU
                 template_nuevo_producto +=`
                 <figure class="figure-container">					
-                  <h1 class="h-productos">${product.nombre}</h1>	
+                  <h1 class="h-productos">${product.nickname}</h1>	
                   <div class="div-imagen">
                     <img class="imagen-producto"  src="imgs/nuevo.jpg" >						
                   </div>
@@ -113,11 +116,11 @@ $(document).ready(function() {
                   </div>															
                   <!-- contenedor de  los items del menu-->																		
 			        	</figure>                
-                `
+               `*/
 
         });
         $('#products').html(template);
-        $('#cards-container-mysql').html(template_nuevo_producto);       
+        //$('#cards-container-mysql').html(template_nuevo_producto);       
       }
     });
   }
