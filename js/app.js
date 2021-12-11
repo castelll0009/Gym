@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   // Testing Jquery
   console.log('jquery is working!');
-  fetchProducts();
+  fetchUsers();
   $('#product-result').hide();
 
   // Search by Key Type (Event)
@@ -30,75 +30,75 @@ $(document).ready(function() {
           }
         }*/
         success: function(response) {
-          const products = JSON.parse(response);
+          const users = JSON.parse(response);
           let template = '';
-          console.log(products);
-          products.forEach(product => {
+          console.log(users);
+          users.forEach(user => {
             template += `
-                    <tr productId="${product.id}">
-                      <td>${product.id}</td>
+                    <tr productId="${user.id}">
+                      <td>${user.id}</td>
                       <td>
-                      <a href="#" class="product-item">
-                        ${product.nombre} 
+                      <a href="#" class="user-item">
+                        ${user.nombre} 
                       </a>
                       </td>                   
-                      <td>${product.precio}</td>
-                      <td>${product.descripcion}</td>
-                      <td>${product.propiedades}</td>   
-                      <td>${product.usos}</td>
-                      <td>${product.receta}</td>
+                      <td>${user.precio}</td>
+                      <td>${user.descripcion}</td>
+                      <td>${user.propiedades}</td>   
+                      <td>${user.usos}</td>
+                      <td>${user.receta}</td>
                       <td>
                         <a class="btn btn-secondary">
                           <i class="fas fa-cog"></i>
                         </a>
-                        <a class="product-delete btn btn-danger" style="color:#fff;">
+                        <a class="user-delete btn btn-danger" style="color:#fff;">
                           <i class="far fa-trash-alt"></i>
                         </a>
                       </td>
                     </tr>
                   `
           });
-          $('#products').html(template);
+          $('#users').html(template);
         }
       })
     } 
     else {
-      fetchProducts();
+      fetchUsers();
     }
   });
 
   // Fetching Products
-  function fetchProducts() {
+  function fetchUsers() {
     $.ajax({
       url: 'backend/gym_usuariosList.php',
       type: 'GET',
       success: function(response) {
         console.log("response"+response); 
-        const products = JSON.parse(response);
+        const users = JSON.parse(response);
         let template = '';
       //  let template_nuevo_producto = '';
-        //console.log(products);
+        //console.log(users);
         //andres
-        products.forEach(product => {
+        users.forEach(user => {
           template += `
-                  <tr productId="${product.id}">
-                    <td>${product.id}</td>
+                  <tr userId="${user.id}">
+                    <td>${user.id}</td>
                     <td>
-                    <a href="#" class="product-item">
-                      ${product.nombre_usuario} 
+                    <a href="#" class="user-item">
+                      ${user.nombre_usuario} 
                     </a>
                     </td>                   
-                    <td>${product.contrasena}</td>
-                    <td>${product.telefono}</td>
-                    <td>${product.nombre}</td>
-                    <td>${product.cedula}</td>
-                    <td>${product.nivel}</td>
-                    <td>${product.correo}</td>
+                    <td>${user.contrasena}</td>
+                    <td>${user.telefono}</td>
+                    <td>${user.nombre}</td>
+                    <td>${user.cedula}</td>
+                    <td>${user.nivel}</td>
+                    <td>${user.correo}</td>
                     <td>
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
                       </a>
-                      <a class="product-delete btn btn-danger" style="color:#fff;">
+                      <a class="user-delete btn btn-danger" style="color:#fff;">
                         <i class="far fa-trash-alt"></i>
                       </a>
                     </td>
@@ -120,7 +120,7 @@ $(document).ready(function() {
                `*/
 
         });
-        $('#products').html(template);
+        $('#users').html(template);
         //$('#cards-container-mysql').html(template_nuevo_producto);       
       }
     });
@@ -146,7 +146,7 @@ $(document).ready(function() {
       console.log(response);
       $('#product-form').trigger('reset');
       document.getElementById('name-action').innerHTML = 'New Product';
-      fetchProducts();
+      fetchUsers();
     });
   });
 
@@ -157,7 +157,7 @@ $(document).ready(function() {
       let id = $(element).attr('productId');
       $.post('backend/product-delete.php', {id}, function(response) {
         //console.log(response);
-        fetchProducts();
+        fetchUsers();
       });
     }
   });
