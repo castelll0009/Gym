@@ -78,6 +78,7 @@ $(document).ready(function() {
         let template = '';
       //  let template_nuevo_producto = '';
         //console.log(products);
+        //andres
         products.forEach(product => {
           template += `
                   <tr productId="${product.id}">
