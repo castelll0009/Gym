@@ -20,6 +20,7 @@
       'cedula' => $row['cedula'],  
       'nivel' => $row['nivel'],
       'correo' => $row['correo'],
+      'cantidad_dias_asistidos' => $row['cantidad_dias_asistidos'],
       'id' => $row['id']
     );
   }
@@ -27,3 +28,4 @@
   $jsonstring = json_encode($json);
   echo $jsonstring;
 ?>
+

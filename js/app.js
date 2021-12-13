@@ -94,6 +94,7 @@ $(document).ready(function() {
                     <td>${user.cedula}</td>
                     <td>${user.nivel}</td>
                     <td>${user.correo}</td>
+                    <td>${user.cantidad_dias_asistidos}</td>
                     <td>
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
