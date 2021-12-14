@@ -81,7 +81,7 @@ $(document).ready(function() {
         //andres
         users.forEach(user => {
           template += `
-                  <tr userId="${user.id}">
+                  <tr id="${user.id}">
                     <td>${user.id}</td>
                     <td>
                     <a href="#" class="user-item">
@@ -158,7 +158,11 @@ $(document).ready(function() {
     if(confirm('¿Seguro que quieres eliminar este producto?')) {
       let element = $(this)[0].parentElement.parentElement;
       let id = $(element).attr('id');
-      console.log(response);
+      console.log("id para eleminar");
+      
+      console.log(id);
+      console.log("---id para eleminar");
+    //  console.log(response);
       $.post('backend/gym_usuariosDelete.php', {id}, function(response) {
         console.log(response);
         fetchUsers();
