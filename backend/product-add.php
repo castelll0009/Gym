@@ -1,5 +1,12 @@
 <?php
     include('database.php');
+    $query = "SELECT * from tbl_gym_usuario";
+    $result = mysqli_query($connection, $query);
+
+  /* si no hay  encuentra resultados se cierra la conexion*/
+  if(!$result) {
+    die('Query Failed'. mysqli_error($connection));
+  }
 
     if(isset($_POST['name'])){
         $name = $_POST['name'];

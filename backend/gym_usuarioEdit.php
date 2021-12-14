@@ -2,7 +2,7 @@
     include('database.php');
 
     if(isset($_POST['id'])){
-        $id =  $_POST['id'];
+        $id = $_POST['id'];
         $nombre_usuario = $_POST['nombre_usuario'];
         $contrasena = $_POST['contrasena'];
         $telefono = $_POST['telefono'];

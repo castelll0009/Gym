@@ -128,25 +128,27 @@ $(document).ready(function() {
   }
   
   // Send Products (New or Edited)
-  $('#product-form').submit(e => {
+  $('#user-form').submit(e => {
     e.preventDefault();
     const postData = {
-      id: $('#productId').val(),
-      name: $('#name').val(),
-      price: $('#price').val(),
-      description: $('#description').val(),
-      properties: $('#properties').val(),
-      uses: $('#uses').val(),
-      recipes: $('#recipes').val()
+      id: $('#id').val(),
+      nombre_usuario: $('#nombre_usuario').val(),
+      contrasena: $('#contrasena').val(),
+      telefono: $('#telefono').val(),
+      nombre: $('#nombre').val(),
+      cedula: $('#cedula').val(),
+      nivel: $('#nivel').val(),
+      correo: $('#correo').val(),
+      cantidad_dias_asistidos: $('#cantidad_dias_asistidos').val()
     };
     console.log(postData.id);
-    const url = edit === false ? 'backend/product-add.php' : 'backend/product-edit.php';
+    const url = edit === false ? 'backend/gym_usuariosAdd.php' : 'backend/gym_usuarioEdit.php';
     console.log(postData, url);
     $.post(url, postData, (response) => {
       edit=false;
       console.log(response);
-      $('#product-form').trigger('reset');
-      document.getElementById('name-action').innerHTML = 'New Product';
+      $('#user-form').trigger('reset');
+      document.getElementById('name-action').innerHTML = 'New User';
       fetchUsers();
     });
   });
