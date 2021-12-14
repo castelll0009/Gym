@@ -14,10 +14,11 @@
        
 
         // Establecer la zona horaria predeterminada a usar. Disponible desde PHP 5.1
-       // date_default_timezone_set('UTC');
-      //  $cantidad_dias_asistidos = date("z");
+        date_default_timezone_set('UTC');
+        $cantidad_dias_asistidos = date("z");
       //  $id = uniqid(),'<br />'; 
-        $query = "INSERT into tbl_gym_usuario(id,nombre_usuario, contrasena, telefono, nombre, cedula, nivel, cantidad_dias_asistidos) VALUES ('$id','$nombre_usuario','$contrasena','$telefono','$nombre','$cedula','$nivel','$cantidad_dias_asistidos')";
+        $nivel = "debil";
+        $query = "INSERT into tbl_gym_usuario(id,nombre_usuario, contrasena, telefono, nombre, cedula, nivel, correo, cantidad_dias_asistidos) VALUES ('$id','$nombre_usuario','$contrasena','$telefono','$nombre','$cedula','$nivel','$correo','$cantidad_dias_asistidos')";
         
         $result = mysqli_query($connection, $query);
         if(!$result) {

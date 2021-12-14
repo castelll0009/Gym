@@ -154,12 +154,13 @@ $(document).ready(function() {
   });
 
   // Delete a Single Product
-  $(document).on('click', '.product-delete', function() {
+  $(document).on('click', '.user-delete', function() {
     if(confirm('¿Seguro que quieres eliminar este producto?')) {
       let element = $(this)[0].parentElement.parentElement;
-      let id = $(element).attr('productId');
-      $.post('backend/product-delete.php', {id}, function(response) {
-        //console.log(response);
+      let id = $(element).attr('id');
+      console.log(response);
+      $.post('backend/gym_usuariosDelete.php', {id}, function(response) {
+        console.log(response);
         fetchUsers();
       });
     }
