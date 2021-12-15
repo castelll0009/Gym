@@ -14,9 +14,10 @@ main{
 	padding: 10px;				
 }
 
-#info-title{
+#info-title{	
 	padding-top: 50px;		
 	color: var(--main-primary);
+	background: white;
 	margin-top: -80px;
 	font-size: 5em;
 }
@@ -32,13 +33,7 @@ main{
 	animation-duration: 0.2s;
 }
 
-#img-home{	
-	margin-top: -50px;
-	width: 40%;	
-	border-radius: 20%;   	
-	box-shadow: none;	
-	overflow: hidden; 			
-}
+
 
 a{
 	color: var(--main-primary);	
@@ -153,15 +148,7 @@ h2{
 }
 
 /*	INFO CONTAINER INFORMACION NORMAL DE LA PAGINA WEB*/
-.info-container{	
-	padding: 10px;
-	margin-left: -10px;
-	margin-right: -10px;
-	overflow: hidden;
-	background-color: #F5F9F9; 
-	text-align: center;
-	margin-top: 80px;
-}
+
 .img-logo{	
 	width: 9%;		
 }
