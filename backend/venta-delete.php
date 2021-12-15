@@ -12,6 +12,6 @@
         }
 
         echo 'Task Deleted Successfully';
-    }
+   }
 
 ?>

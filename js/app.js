@@ -12,7 +12,7 @@ $(document).ready(function() {
     if($('#search').val()) {
       let search = $('#search').val();
       $.ajax({
-        url: 'backend/product-search.php',        
+        url: 'backend/gym_usuariosSearch.php',        
         type: 'POST',
         data: {search}, //podemos enviar string , objetos
         /*success: function (response) {
@@ -35,19 +35,21 @@ $(document).ready(function() {
           console.log(users);
           users.forEach(user => {
             template += `
-                    <tr productId="${user.id}">
+                   <tr id="${user.id}">
                       <td>${user.id}</td>
                       <td>
                       <a href="#" class="user-item">
-                        ${user.nombre} 
+                       ${user.nombre_usuario} 
                       </a>
-                      </td>                   
-                      <td>${user.precio}</td>
-                      <td>${user.descripcion}</td>
-                      <td>${user.propiedades}</td>   
-                      <td>${user.usos}</td>
-                      <td>${user.receta}</td>
-                      <td>
+                   </td>                   
+                    <td>${user.contrasena}</td>
+                    <td>${user.telefono}</td>
+                    <td>${user.nombre}</td>
+                    <td>${user.cedula}</td>
+                    <td>${user.nivel}</td>
+                    <td>${user.correo}</td>
+                    <td>${user.cantidad_dias_asistidos}</td>
+                   <td>
                         <a class="btn btn-secondary">
                           <i class="fas fa-cog"></i>
                         </a>
@@ -170,41 +172,27 @@ $(document).ready(function() {
     }
   });
 
-  // Show a Product Listed Selected in Formulary
-  $(document).on('click', '.product-item', function() {
+  // Show a USer Listed Selected in Formulary
+  $(document).on('click', '.user-item', function() {
     let element = $(this)[0].parentElement.parentElement;
-    let id = $(element).attr("productId");
+    let id = $(element).attr("id");
       //console.log(id);
-      $.post('backend/product-single.php', {id}, function(response){
+      $.post('backend/gym_usuariosSingle.php', {id}, function(response){
         edit = true;
         //console.log(response);
-        const product = JSON.parse(response);
-        //console.log(product);
-        $('#productId').val(product.id);
-        $('#name').val(product.nombre);
-        $('#price').val(product.precio);
-        $('#description').val(product.descripcion);
-        $('#recipes').val(product.recetas);
-        $('#properties').val(product.propiedades);
-        $('#uses').val(product.usos);
+        const user = JSON.parse(response);
+        //console.log(user);
+        $('#id').val(user.id);
+        $('#nombre_usuario').val(user.nombre_usuario);
+        $('#contrasena').val(user.contrasena);
+        $('#telefono').val(user.telefono);
+        $('#nombre').val(user.nombre);
+        $('#cedula').val(user.nombre);
+        $('#nivel').val(user.nivel);
+        $('#correo').val(user.correo);
+        $('#cantidad_dias_asistidos').val(user.cantidad_dias_asistidos);
         //title action
-        document.getElementById('name-action').innerHTML = 'Edit Product';
+        document.getElementById('name-action').innerHTML = 'Edit User';
      })
   });
-
-  /*
-  // Get a Single Product by Id - The same above ^^^^
-  $(document).on('click', '.product-item', function() {
-    let element = $(this)[0].parentElement.parentElement;
-    let id = $(element).attr('productId');
-    $.post('backend/product-single.php', {id}, function(response) {
-      const product = JSON.parse(response);
-      $('#name').val(product.nombre);
-      $('#price').val(product.precio);
-      $('#description').val(product.descripcion);
-      edit = true;
-    });
-  });
-  */
-
 });
