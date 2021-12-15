@@ -14,13 +14,6 @@ main{
 	padding: 10px;				
 }
 
-#info-title{	
-	padding-top: 50px;		
-	color: var(--main-primary);
-	background: white;
-	margin-top: -80px;
-	font-size: 5em;
-}
 #zumbido{	
 	cursor: pointer;
 }
@@ -167,20 +160,6 @@ h2{
 .div-imagen{	
 	width: 100%;	
 	
-}
-
-.figure-container{		
-	position: relative;
-	background-color: white;
-	border-color: rgb(118, 177, 0);
-	border-radius: 7%;
-	border: 2px solid  rgba(0, 17, 2, 0.918);;
-	min-width: 300px;
-	max-width: 300px;
-	min-height: 300px;
-	max-height: max-content;
-	overflow: hidden;
-	position: relative;			
 }
 
 .div-imagen{
@@ -331,6 +310,10 @@ span{
 	opacity: 1;						
 }	
 
+.grad-purple{    
+    background-color: purple; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #8a2687,#4f2a91, #05032a);
+  }
 /*///////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////*/
@@ -429,10 +412,7 @@ span{
 		/*box-shadow: 0px 0px 40px -5px; 	*/
 		box-shadow: none;	
 	}
-	#info-title{	
-		margin-top: -40px;
-		font-size: 3em;
-	}
+
 	.img-logo{
 		width: 20%;		
 	}

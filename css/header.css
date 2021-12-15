@@ -1,3 +1,9 @@
 .container-logo-title h1{
     font-size: 2em;
+    color: white;
+}
+.fs-marca{
+    font-size: 0.6em;
+    margin-top: 20px;
+    color:white;    
 }
