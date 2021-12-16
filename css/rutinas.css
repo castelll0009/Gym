@@ -1,3 +1,5 @@
+
+
 .figure-container{		
 	position: relative;
 	background-color: white;
@@ -6,7 +8,7 @@
 	border: 2px solid  rgba(0, 17, 2, 0.918);;
 	min-width: 300px;	
 	min-height: 100px;
-	max-width: 350px;
+	max-width: 250px;
     width: max-content;
     height: max-content;
 	max-height: max-content;
@@ -19,14 +21,7 @@
 	font-size: 1.5em;
 	margin-bottom: 0;	
 }
-figure.h2{
-	color: white;
-	font-size: 32px;
-	padding-top: 10px;
-	padding-bottom: 3.7px;
-	background-color: black;
-	opacity: 0.5;
-}
+
 .imagen-producto{
     width: 100%;
     display: block;

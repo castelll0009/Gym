@@ -7,18 +7,7 @@
     font-family: 'Nunito', sans-serif;
 }
 
-header{
-    width: 100%;
-    height: 110px;
-    border-bottom: 1px solid var(--main-primary);
-    position: fixed;
-    z-index: 100;
-    justify-content: center;
-    text-align: center;
-    background: white;    
-    top: 0;    
-    left: 0;        
-}
+
 .logo{   
     cursor: pointer;
 }

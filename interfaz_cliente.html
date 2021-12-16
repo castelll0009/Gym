@@ -2,17 +2,21 @@
 <html lang="en">
 	<head>
 		
-        <meta charset= "utf-8">
+        <meta charset= "utf-8">		
         <link rel="stylesheet" href="css/rutinas.css">	
         <link rel="stylesheet" href="css/contenedor-informacion.css">	
         <link rel="stylesheet" href="css/header.css">	
 		<link rel="stylesheet" href="css/stylemovil.css">										        									
 		<meta name="viewport"  content="width=device-width initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/slider.css">
+		<!--Barras  de progreso librerias-->
+		<link rel="stylesheet" href="/lib/w3.css">    
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     	<link
 	    rel="stylesheet"
     	href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    	/>         
+    	/>     
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">  
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -26,48 +30,55 @@
 		<title>Gym</title>
 	</head>
 	<body>
+				
+		<header class="grad-purple">
+			<div class="cont-img-perfil">
+				<img  id="zumbido" class="img-logo animate__animated animate__swing animate__normal" src="imgs/foto-perfil.jpg">					
+			</div>										
+				<link rel="stylesheet" href="/lib/w3.css">
+				<div class="info-perfil w3-container">
+					<h3 class="nombre-usuario">Castelll0009</h1>		
+					<h3 class="nivel-fit">Master Fitness</h2>	
+					<div class="cont-medalla-estrellas">
+						<img class="img-medalla" src="imgs/principiante.png"></img>	
+					</div>			
+					
+					<div class="w3-progress-container">
+						<div id="myBar" class="w3-progressbar w3-green" style="width:20%">
+						  <div id="demo" class="w3-center w3-text-white">20%</div>
+						</div>
+					  </div>							
+				</div>	
+									
+			<div class="container-header ">							
+
+				<div id="menu-desplegable" class="container-menu">
+					<nav class="menu"></nav>
+						<ul  class=" menu-ul">
+						<a href = "index.php" >
+							<li href= "index.php" ><label class="fa fa-home" style="color: #02350f" ></label></li>
+						</a>
+						<a href = "catalogo.php" >
+							<li  >CATALOGO</li>
+						</a>
+						<a href = "admin_cliente.html" >
+							<li >LISTA </li>
+						</a>
+						<a href = "" >
+							<li >ACERCA DE </li>
+						</a>																
+						<li style="color: #023609; font-weight: bold;">INICIAR SESION</li>
+					</ul>
+				</div>					
+			</div>
+		</header>	
         <div class="info-container" >		
             <img id="img-portada" src="imagen-portada.gif">							
-            <h1 class="info-title">Rutinas</h1>						
-            </div>				
         </div>
 		<main>
 			<i class="fa fa-th" id="btn-detalles"  onclick="desplegarItems()"></i>
-			<i class="fas fa-eye" id="beepc" onclick="vistaEscritorio()" ></i>			
-				
-			<header class="grad-purple">							
-				<div class="container-header ">
-					
-					<div  class="container-logo-title">		
-						<div class="contenedor-img">
-							<img  id="zumbido" class="img-logo animate__animated animate__swing animate__normal" src="logo.png">
-						</div>								
-						<h1 >Warriors Gym</h1>
-						<h2 class="fs-marca">FS </h2>
-					</div>
-	
-					<div id="menu-desplegable" class="container-menu">
-						<nav class="menu"></nav>
-							<ul  class=" menu-ul">
-							<a href = "index.php" >
-								<li href= "index.php" ><label class="fa fa-home" style="color: #02350f" ></label></li>
-							</a>
-							<a href = "catalogo.php" >
-								<li  >CATALOGO</li>
-							</a>
-							<a href = "admin_clientes.html" >
-								<li >LISTA </li>
-							</a>
-							<a href = "" >
-								<li >ACERCA DE </li>
-							</a>																
-							<li style="color: #023609; font-weight: bold;">INICIAR SESION</li>
-						</ul>
-					</div>					
-				</div>
-			</header>	
+			<i class="fas fa-eye" id="beepc" onclick="vistaEscritorio()" ></i>					
 		
-
 			<div class="cards-container" >
 				<figure class="figure-container ">					
 					<h1 class="grad-purple h-productos">Piernas intermedio</h1>	
@@ -89,8 +100,7 @@
 					</div>															
 					<!-- contenedor de  los items del menu-->																		
 				</figure>																																
-			</div>			
-						
+			</div>									
 				
 			<nav class=" nav-barra-inferior animate__animated animate__fadeIn">
 				<a href = "index.html" class="margen-derecha">Catalogo</a>
@@ -106,6 +116,7 @@
 	  		Your browser does not support the audio element.
 		</audio>
 
+		<script src="js/interfaz-cliente.js"></script>
 		<script src="js/app.js"></script>			
 		<script src="js/menu.js"></script>			
 		<script src="js/buttom_menu.js"></script>	

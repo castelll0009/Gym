@@ -1,3 +1,17 @@
+header{
+    width: 100%;    
+    border-bottom: 1px solid var(--main-primary);    
+    z-index: 100;  
+    height: max-content;      
+    height: fit-content;   
+    min-height: 120px; 
+    background: white;      
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 100px;
+
+}
+
 .container-logo-title h1{
     font-size: 2em;
     color: white;
@@ -7,3 +21,56 @@
     margin-top: 20px;
     color:white;    
 }
+.cont-img-perfil{
+    position: relative;
+    padding-top: 7px;
+    padding-left: 7px;    
+    width: 100px;   
+    max-height: 50px; 
+}
+
+.cont-img-perfil img{
+    border-radius: 7%;    
+    border: 1px solid rgb(234, 190, 63);    
+    width: 100%;    
+    display: block;
+    float:left;        
+    text-align: left;
+}
+
+/*infoormacion perfil */
+/*infoormacion perfil */
+/*infoormacion perfil */
+.info-perfil{
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;    
+    color:white;
+}
+
+.info-perfil img{
+    width: 10%;
+    margin:0;
+}
+.cont-medalla-estrellas{
+    max-width: 5px;
+    max-height: 5px;   
+}
+.img-medalla{        
+    
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.info-perfil h3{
+    padding: 0;
+    margin: 0;
+}
+.nombre-usuario{
+    font-size: 1em;
+}
+.nivel-fit{
+    font-size: 1em;
+}
+
