@@ -6,19 +6,20 @@
 	border: 2px solid  rgba(0, 17, 2, 0.918);;
 	min-width: 300px;	
 	min-height: 100px;
+	max-width: 350px;
     width: max-content;
     height: max-content;
 	max-height: max-content;
 	overflow: hidden;
-	position: relative;			
+	position: relative;				
 }
 
-figure h1{
-	color: white;
-	font-size: 0.5em;
+.figure-container h1{
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
 	margin-bottom: 0;	
 }
-figure h2{
+figure.h2{
 	color: white;
 	font-size: 32px;
 	padding-top: 10px;
