@@ -1,7 +1,20 @@
 $(document).ready(function() {
   // Global Settings
   let edit = false;
+  mostrarDatos();
 
+  function mostrarDatos() {
+    let id = 12349;
+    $.post('backend/gym_usuariosSingle.php', {id}, function(response){        
+      //console.log("USARIOOOOOOOOO INTERFAZ"+response);         
+      const user = JSON.parse(response);           
+      //console.log(user);      
+      $('.nombre-usuario').html(user.nombre_usuario);      
+      $('.nivel-fit').html(user.nivel);      
+      //title action
+      //document.getElementById('name-action').innerHTML = 'Edit User';
+   })    
+  };
   // Testing Jquery
   console.log('jquery is working!');
   fetchUsers();
