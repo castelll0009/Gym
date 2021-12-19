@@ -47,12 +47,11 @@ header{
 /**/
 .nombre-nivel-perfil{    
     color:white;
-    padding-left: 10px;
-    
+    padding-left: 10px;    
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;  
-    width: 100%;         
+    width: 100%;       
 }
 .nombre-nivel-perfil div{  
     
@@ -61,12 +60,36 @@ header{
     padding: -1px;    
     margin: -1px;
 }
-/*infoormacion perfil */
-/*infoormacion perfil */
-
+/*Medallas estrellas */
 .cont-medalla-estrellas{    
- padding: 0;
- margin-right: 0; 
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0;
+    margin-right: 0; 
+    margin: 0;
+    height: 1px;
+    max-height: 30px;  
+}
+.cont-medalla-estrellas span{
+    color:rgba(0, 0, 0, 0.219);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis:10px;          
+}
+
+.estrella1{
+    color: gold !important;
+}
+.estrella2{
+    color: gold !important;
+}
+.estrella3{
+    color: gold !important;
+}
+.fa-star{
+    min-width: 15px;         
+    max-width: 15x;    
 }
 .img-medalla{         
     min-width: 30px;         
@@ -82,7 +105,7 @@ header{
     max-width: 95%;        
     max-height: 10px;      
 }
-#myBar{
+#myBar{    
     max-height: 10px;
     min-height: 10px;
 }
