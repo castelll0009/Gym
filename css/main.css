@@ -9,14 +9,23 @@ body{
 	font-family: 'Lato', sans-serif;
 	font-family: 'Zilla Slab', serif;
 	-webkit-user-select: none;		
+	
+	/*background-image: url(https://t4.ftcdn.net/jpg/04/64/93/89/240_F_464938922_BVaEHmTkrLR9KF0WECxXivICZZUSIrbu.jpg);*/
+	background-image: url(https://img.freepik.com/foto-gratis/pared-edificio-ladrillo-negro-interior-loft-moderno-fondo-diseno_73152-5648.jpg?size=338&ext=jpg);	
+	background-image: url(https://us.123rf.com/450wm/elovich/elovich1412/elovich141200421/34788179-textura-de-papel-fondo-negro.jpg?ver=69);
+	background-image: url(https://image.freepik.com/vector-gratis/hexagono-fondo-abstracto-textura-negra_206725-413.jpg);		
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+	background-color:rgb(31, 30, 30);
 }
-main{				
-	padding: 10px;		
-	background-image: url(https://us.123rf.com/450wm/romastudio/romastudio1812/romastudio181200216/117004062-material-deportivo-sobre-un-fondo-negro-vista-superior-motivaci%C3%B3n.jpg?ver=6);		
+main{					
+	padding: 10px;			
+	padding-top: 84px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	z-index: -1;
 	/*background-size: cover;	*/
-	background-color: rgb(20, 20, 20);
+	/*background-color: rgb(20, 20, 20);*/
 }
 
 #zumbido{	
@@ -247,6 +256,12 @@ span{
     background-color: gold; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, gold,rgb(240, 214, 66), gold);
 }
+
+.grad-red{    
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #f00606,#bd0000, #2a0303);
+  }
+
 /*///////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////*/
