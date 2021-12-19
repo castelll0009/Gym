@@ -1,19 +1,28 @@
 
 
+
+.cards-container{	
+	text-align: center;
+	justify-content: center;
+	width: auto;
+	display: flex;	
+	flex-direction: row;		
+	flex-wrap: wrap;		
+	position: relative;	
+}	
 .figure-container{		
 	position: relative;
 	background-color: white;
 	border-color: rgb(71, 0, 50);
 	border-radius: 7%;
-	border: 2px solid  rgba(0, 17, 2, 0.918);;
+	/*border: 2px solid  rgba(0, 17, 2, 0.918);*/
 	min-width: 300px;	
 	min-height: 100px;
 	max-width: 250px;
     width: max-content;
     height: max-content;
 	max-height: max-content;
-	overflow: hidden;
-	position: relative;				
+	overflow: hidden;				
 }
 
 .figure-container h1{
@@ -26,6 +35,18 @@
     width: 100%;
     display: block;
 }
-.div-imagen{
-    
+
+/*/////////////ESCRITORIO/////////////////////////////////////////////////*/
+@media screen and (min-width: 700px){	
+	
+	.figure-container{	
+		margin-left: 25px;
+		margin-bottom: 25px;		
+	}
+
+	
+	figure:hover{		
+		z-index: 1;				
+		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);							
+	}		
 }

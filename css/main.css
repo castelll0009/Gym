@@ -144,16 +144,6 @@ h2{
 
 
 
-.cards-container{	
-	text-align: center;
-	justify-content: center;
-	width: auto;
-	display: flex;	
-	flex-direction: row;		
-	flex-wrap: wrap;		
-	position: relative;	
-  }
-
 .div-imagen{	
 	width: 100%;	
 	
@@ -174,21 +164,6 @@ img{
 	text-align: center;
 }
 
-figure h1{
-	color: white;
-	font-size: 32px;
-	margin-bottom: 0;
-	background-color: rgba(0, 17, 2, 0.918);
-}
-figure h2{
-	color: white;
-	font-size: 32px;
-	padding-top: 10px;
-	padding-bottom: 3.7px;
-	background-color: black;
-	opacity: 0.5;
-}
-
 
 #iframe-map{		
 	width : 600px;
@@ -201,45 +176,8 @@ figure h2{
 	text-align: center;		
 	margin-top: 10px;
 }
-#img-calidad{
-	width: 500px; ; 
-	margin: auto; 
-}
-.img-tercio{
-	width: 500px;
-	margin: auto;
-}
-#text{
-	display:none;
-}
-#text2{
-	display:none;
-}
-#text3{
-	display:none;
-}
-#text4{
-	display:none;
-}
-#text5{
-	display:none;
-}
-#text6{
-	display:none;
-}
-#text7{
-	display:none;
-}
-#text8{
-	display:none;
-}
-#text9{
-	display:none;
-}
 
-.info-container div p{
-	margin-top: 30px;	
-}
+
 .desaparecer-contenedor{
 	display: none;
 	opacity: 0;
@@ -252,18 +190,7 @@ figure h2{
 	opacity: 1;
 }
 
-.div-figure{						
-	overflow: hidden;
-	margin-top: -15px;
-	padding: 10px;
-	padding-top: 15px;
-	padding-bottom: 0px;
-	margin-left: -10px;		
-	background-color: #fff;	
-	background-color: #fff;
-	border-radius: 20px;	
-	z-index: 0;
-}
+
 #btn-detalles{			
 	color: var(--main-primary);		
 	font-size: 2em;
@@ -311,63 +238,15 @@ span{
     background-color: purple; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #8a2687,#4f2a91, #05032a);
   }
-/*///////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////*/
-/*/////////////ESCRITORIO/////////////////////////////////////////////////*/
-/*movil///////////////////////////////////////////*/
-@media screen and (min-width: 700px){	
-	.cards-container{
-		margin: 50px;
-	}
-	.figure-container{	
-		margin-left: 25px;
-		margin-bottom: 25px;
-		min-width: 300px;	
-		min-height: max-content;	
-		max-height: 710px;	
-		max-height: 500px;	
-		overflow: hidden;
-		position: relative;			
-	}
-	figure{
-		position: relative;		
-	}
-	
-	figure:hover{		
-		z-index: 1;				
-		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);							
-	}	
-
-	.div-figure{					
-		overflow: hidden;
-		margin-top: -15px;
-		padding: 10px;
-		padding-top: 15px;
-		padding-bottom: 0px;
-		margin-left: -10px;				
-		border-radius: 20px;	
-		z-index: 0;				
-	}
-	
-	
-	.div-figure:hover{						
-		margin-top: -15px;
-		padding: 10px;
-		padding-top: 15px;
-		padding-bottom: 0px;
-		margin-left: -10px;			
-		max-height: max-content;							
-		/*
-		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);	*/
-		
-		border-radius: 20px;
-		z-index: 2;
-	}
-
-	
+.grad-gold{    
+    background-color: gold; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, gold,rgb(240, 214, 66), gold);
 }
+/*///////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////*/
+
 /*movil///////////////////////////////////////////*/
 /*movil///////////////////////////////////////////*/
 @media screen and (max-width: 700px){	 
@@ -413,21 +292,7 @@ span{
 
 	.img-logo{
 		width: 20%;		
-	}
-
-	.cards-container{			
-		width: 100%;	
-		padding: 0;	
-	}	
-	
-	figure:hover{			
-		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);				
-	}
-
-	
-	figure img{	
-		width: 50%;
-	}
+	}		
 
 	#iframe-map{		
 		width : 350px;
