@@ -10,6 +10,12 @@
 	flex-wrap: wrap;		
 	position: relative;	
 }	
+.titulo-opc-menu{
+	color:white;
+	display:  block;
+	text-align: center;
+	width: 100%;
+}
 .figure-container{		
 	position: relative;
 	background-color: white;
@@ -45,7 +51,7 @@
 	}
 
 	
-	figure:hover{		
+	.figure-container:hover{		
 		z-index: 1;				
 		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);							
 	}		
