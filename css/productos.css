@@ -17,10 +17,10 @@
 	width: 100%;
 }
 .figure-container-productos{		
-	position: relative;
-	background-color: white;
-	border-color: rgb(71, 0, 50);
-	border-radius: 1%;
+	position: relative;	
+	background-color: rgb(0, 0, 0);
+	border-color: 1px solid rgb(70, 0, 55);
+	border-radius: 2%;
 	/*border: 2px solid  rgba(0, 17, 2, 0.918);*/
 	min-width: 300px;	
 	min-height: 100px;
@@ -40,7 +40,7 @@
 
 .imagen-producto{
     width: 100%;
-    display: block;
+	display: block;	
 }
 
 .precio-producto{

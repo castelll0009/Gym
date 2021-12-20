@@ -18,16 +18,17 @@
 }
 .figure-container{		
 	position: relative;
-	background-color: white;
-	border-color: rgb(71, 0, 50);
-	border-radius: 1%;
+	background-color: rgb(0, 0, 0);
+	border-color: rgb(0, 0, 0);
+	border-radius: 2%;
 	/*border: 2px solid  rgba(0, 17, 2, 0.918);*/
 	min-width: 300px;	
+	max-width: 300px;
 	min-height: 100px;
-	max-width: 250px;
+	max-height: max-content;
     width: max-content;
     height: max-content;
-	max-height: max-content;
+	
 	overflow: hidden;				
 }
 

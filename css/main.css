@@ -249,9 +249,14 @@ span{
 	opacity: 1;						
 }	
 
-.grad-purple{    
+
+.grad-purple-org{    
     background-color: purple; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #8a2687,#4f2a91, #05032a);
+  }
+.grad-purple{    
+    background-color: rgba(128, 0, 128, 0.555); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #8a2687b7,#502a918f, #05032a94);
   }
 .grad-gold{    
     background-color: gold; /* For browsers that do not support gradients */
