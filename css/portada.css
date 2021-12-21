@@ -7,14 +7,14 @@
 	flex-wrap: wrap;		
 	position: relative;	
 	justify-content: center;	
-	background-image: radial-gradient( black, rgba(255, 0, 0, 0));		
-	font-family: 'Roboto', sans-serif;
-	margin-bottom: -100px;
-	
+/*	background-image: radial-gradient( black, rgba(255, 0, 0, 0));		*/
+	font-family: 'Roboto', sans-serif;		
+	margin-bottom: -100px;	
 }
-.figure-container-portada{				
+.figure-container-portada{	
 	position: relative;		
-	background-color: rgba(255, 255, 255, 0);
+	/*background-color: rgba(255, 255, 255, 0);*/
+	background-color: rgba(0, 0, 0, 0);
 	border-color: rgb(71, 0, 50);
 	/*border: 2px solid  rgba(0, 17, 2, 0.918);*/	
 	width: 100%;	
@@ -26,8 +26,9 @@
 	content:url("https://media.istockphoto.com/photos/gym-background-with-equipment-picture-id953047628?k=20&m=953047628&s=170667a&w=0&h=5InfjXeOS0Aiy1D4OXtpwgH_m3NurLm4xYrMAy7yu-g=");	
 	content:url("https://media.istockphoto.com/photos/minimal-gym-dark-background-picture-id947343796?k=20&m=947343796&s=170667a&w=0&h=iX7kIzZLvWSrndOi35kmbMo4uqLnLHBTK_9fmW29SyY=");
 	*/
-	/*content:url("https://us.123rf.com/450wm/romastudio/romastudio1812/romastudio181200216/117004062-material-deportivo-sobre-un-fondo-negro-vista-superior-motivaci%C3%B3n.jpg?ver=6");*/	
-	position: fixed;
+	/*content:url("https://us.123rf.com/450wm/romastudio/romastudio1812/romastudio181200216/117004062-material-deportivo-sobre-un-fondo-negro-vista-superior-motivaci%C3%B3n.jpg?ver=6");	*
+	*/
+	display:none;
 	filter: blur(5px);
 	box-shadow: 80px 80px 80px 80px black inset;
 	z-index: -1;

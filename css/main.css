@@ -25,11 +25,12 @@ body{
 main{					
 	/*padding: 10px;			*/
 	padding-top: 84px;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	z-index: -1;
-	/*background-size: cover;	*/
+	
 	/*background-color: rgb(20, 20, 20);*/
+	background-image: url("https://us.123rf.com/450wm/romastudio/romastudio1812/romastudio181200216/117004062-material-deportivo-sobre-un-fondo-negro-vista-superior-motivaci%C3%B3n.jpg?ver=6");		
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+	background-size: contain;	
 }
 
 #zumbido{	
@@ -258,8 +259,8 @@ span{
     background-image: linear-gradient(to right, #8a2687,#4f2a91, #010005);
   }
 .grad-purple{    
-    background-color: rgba(23, 0, 128, 0.26); /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #8a2687f1,#502a91e5, #00000010);
+    background-color: rgba(23, 0, 128, 0.185); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #8a2687f1,#502a914b, #00000010);
   }
 .grad-gold{    
     background-color: gold; /* For browsers that do not support gradients */
