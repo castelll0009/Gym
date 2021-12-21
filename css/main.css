@@ -8,19 +8,22 @@ body{
 	font-family: 'Kaushan Script', cursive;
 	font-family: 'Lato', sans-serif;
 	font-family: 'Zilla Slab', serif;
-	-webkit-user-select: none;		
-	
+	-webkit-user-select: none;			
 	/*background-image: url(https://t4.ftcdn.net/jpg/04/64/93/89/240_F_464938922_BVaEHmTkrLR9KF0WECxXivICZZUSIrbu.jpg);*/
+	/*
 	background-image: url(https://img.freepik.com/foto-gratis/pared-edificio-ladrillo-negro-interior-loft-moderno-fondo-diseno_73152-5648.jpg?size=338&ext=jpg);	
 	background-image: url(https://us.123rf.com/450wm/elovich/elovich1412/elovich141200421/34788179-textura-de-papel-fondo-negro.jpg?ver=69);
 	background-image: url(https://image.freepik.com/vector-gratis/hexagono-fondo-abstracto-textura-negra_206725-413.jpg);		
+	*/
+	background: black;
 	/*background-size: cover;*/
 	/*background-repeat: no-repeat;*/
-	background-attachment: fixed;
-	background-color:rgb(31, 30, 30);
+/*	background-attachment: fixed;*/
+	/*background-color:rgb(31, 30, 30);*/
+
 }
 main{					
-	padding: 10px;			
+	/*padding: 10px;			*/
 	padding-top: 84px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -251,12 +254,12 @@ span{
 
 
 .grad-purple-org{    
-    background-color: purple; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #8a2687,#4f2a91, #05032a);
+    background-color: rgb(128, 0, 128); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #8a2687,#4f2a91, #010005);
   }
 .grad-purple{    
-    background-color: rgba(128, 0, 128, 0.555); /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #8a2687b7,#502a918f, #05032a94);
+    background-color: rgba(23, 0, 128, 0.26); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #8a2687f1,#502a91e5, #00000010);
   }
 .grad-gold{    
     background-color: gold; /* For browsers that do not support gradients */

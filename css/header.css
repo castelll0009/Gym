@@ -1,14 +1,15 @@
-header{        
+header{       
+    font-family: 'Roboto', sans-serif; 
     width: 100%;   
     display: block;       
     z-index: 10000;  
     height: max-content;              
     background: white;      
     font-size: 1em;    
-    padding-bottom: 10px;    
+    padding-bottom: 1px;    
     position:relative;
-    position: fixed;
-    
+    position: fixed;    
+    backdrop-filter: blur(2px);
 }
 .borde{
     border: 1px solid rgb(234, 190, 63);  
@@ -108,8 +109,8 @@ header{
     max-height: 10px;      
 }
 #myBar{    
-    max-height: 10px;
-    min-height: 10px;
+    max-height: 7px;
+    min-height: 7px;
 }
 #demo{
     margin-top: -7px;

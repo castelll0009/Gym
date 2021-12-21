@@ -1,7 +1,7 @@
 
 
 
-.cards-container{	
+.cards-container-productos{	
 	text-align: center;
 	justify-content: center;
 	width: auto;
@@ -9,6 +9,7 @@
 	flex-direction: row;		
 	flex-wrap: wrap;		
 	position: relative;	
+	background: linear-gradient(  #040814 70%,rgba(0, 0, 0, 0));
 }	
 .titulo-opc-menu{
 	color:white;
