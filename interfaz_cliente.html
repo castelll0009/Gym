@@ -5,16 +5,15 @@
         <meta charset= "utf-8">		
 		<!-- swiper  slide-->
 		<link  rel="stylesheet"  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="css/swiper.css">	
 
 		<link rel="stylesheet" href="css/portada.css">	
 		<link rel="stylesheet" href="css/productos.css">	
 		<link rel="stylesheet" href="css/menu-iconos.css">	
         <link rel="stylesheet" href="css/rutinas.css">	
         <link rel="stylesheet" href="css/contenedor-informacion.css">	
-        <link rel="stylesheet" href="css/header.css">	
-		<link rel="stylesheet" href="css/stylemovil.css">										        									
-		<meta name="viewport"  content="width=device-width initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/slider.css">
+        <link rel="stylesheet" href="css/header.css">											        									
+		<meta name="viewport"  content="width=device-width initial-scale=1.0">		
 		<!--Barras  de progreso librerias
 		<link rel="stylesheet" href="/lib/w3.css">   
 		--> 
@@ -42,7 +41,7 @@
 	</head>
 	<body>
 				
-		<header class="grad-purple">
+		<header class="grad-blue">
 
 			<div class="contenedor-info-header">
 
@@ -115,25 +114,52 @@
 
 			<!--Rutinas-->	
 			<div class="cards-container" >
+				
 				<h1 class="titulo-opc-menu">Rutinas</h1>
-				<figure class="figure-container">					
-					<h1 class="grad-purple h-productos">Piernas intermedio</h1>						
-					<img class="imagen-producto"  src="imgs/pesas.gif" >											
-					<div class="div-detalles-producto">
-						<h2>$4000</h2>						
-					</div>															
-					<!-- contenedor de  los items del menu-->																		
-				</figure>		
-                <figure class="figure-container ">					
-					<h1 class="grad-purple h-productos">Abdomen intermedio</h1>	
-					<div class="div-imagen">
-						<img class="imagen-producto"  src="imgs/abdomen.gif" >						
+				<!-- Slider main container -->
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+					  <div class="swiper-slide cards-container-rutinas">						  		
+						<figure class="figure-container-rutinas">												
+							<img class="imagen-producto"  src="imgs/pesas.gif" >																	
+																									
+							<!-- contenedor de  los items del menu-->																		
+						</figure>	
+						<h1 class="h-rutinas h-productos">Piernas intermedio</h1>				
+					  </div>
+
+					  <div class="swiper-slide cards-container-rutinas">
+						<figure class="figure-container-rutinas ">													
+							<div class="div-imagen">
+								<img class="imagen-producto"  src="imgs/abdomen.gif" >						
+							</div>																					
+							<!-- contenedor de  los items del menu-->																		
+						</figure>
+						<h1 class="h-rutinas">Abdomen intermedio</h1>
+					  </div>
+
+					  <div class="swiper-slide cards-container-rutinas">
+						<figure class="figure-container-rutinas">												
+							<img class="imagen-producto"  src="imgs/pesas.gif" >																	
+																									
+							<!-- contenedor de  los items del menu-->																		
+						</figure>	
+						<h1 class="h-rutinas ">Piernas intermedio2</h1>	
+					  </div>
+					  
+					  <div class="swiper-slide cards-container-rutinas">
+						<figure class="figure-container-rutinas">												
+							<img class="imagen-producto"  src="imgs/piernas-intermedio.gif" >																																										
+							<!-- contenedor de  los items del menu-->																		
+						</figure>
+						<h1 class="h-rutinas">Piernas avanzado</h1>	
+					  </div>
+					
 					</div>
-					<div class="div-detalles-producto">
-						<h2>$4000</h2>						
-					</div>															
-					<!-- contenedor de  los items del menu-->																		
-				</figure>																																
+					<div class="swiper-pagination"></div>
+				  </div>
+		
+               																																
 			</div>		
 			<!--Productos  Gym-->							
 			<div class="cards-container-productos" >
@@ -162,13 +188,14 @@
 	  		Your browser does not support the audio element.
 		</audio>
 		
-		<script src="js/interfaz-cliente.js"></script>		
+		<script src="js/interfaz-cliente.js"></script>				
 		<script src="js/app.js"></script>			
 		<script src="js/menu.js"></script>			
 		<script src="js/buttom_menu.js"></script>	
 		<script src="js/jquery.js"></script>  		
 		 <!-- Swiper JS -->
-		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>	    
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>	 
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
 	    <!-- Initialize Swiper -->
 	    <script src="js/slider.js"></script> 		
 	</body>
