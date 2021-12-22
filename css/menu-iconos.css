@@ -42,19 +42,30 @@
 	margin: auto;
 }
 
-.icono-opcion{	
-	border-radius: 7%;
-	width: 100%;
-    display: block;	
-}
 .span-cont-icono{
-	vertical-align: middle;
-	
-}
-.icono-rutinas{
-	
-	align-content: center;
+	background-color: aliceblue;
+	border: 1px solid #ffffff;	
 	min-width: 70px;
 	min-height: 70px;
+	border-radius: 5%;
+	display: block;
+	position: relative;
+}
+.span-cont-icono i{	
+	font-size: 2em;
+	min-width: 70px;
+	min-height: 70px;	
+	position: absolute;
+	top: 28%;
+	left: 1%;	
+	
 }
 	
+.icono-rutinas{		
+
+	min-width: 70px;
+	min-height: 70px;
+}	
+.icono-menu{
+	color:#2283CD;	
+}

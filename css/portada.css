@@ -46,4 +46,32 @@
 	width: 100%;
     display: block;	
 }
+/*/////////////ESCRITORIO/////////////////////////////////////////////////*/
+@media screen and (min-width: 700px){	
+	
+	.figure-container{	
+		margin-left: 25px;
+		margin-bottom: 25px;		
+	}
+
+	
+	.figure-container:hover{		
+		z-index: 1;				
+		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);							
+	}		
+}
+	/*/////////////MOVILLL/////////////////////////////////////////////////*/
+@media screen and (max-width: 700px){	
+	
+	.figure-container{	
+		margin-left: 25px;
+		margin-bottom: 25px;		
+	}
+
+	
+	.figure-container:hover{		
+		z-index: 1;				
+		box-shadow: 2px 2px 4px var(--main-primary), 10px 10px 10px var(--main-primary);							
+	}		
+}
 	
