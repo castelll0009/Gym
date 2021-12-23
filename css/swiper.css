@@ -40,7 +40,7 @@
     width: 100%;
   }
  .swiper-pagination{
-   color: white !important;
+   color: white;
  }
 
   .swiper-slide:nth-child(2n) {
