@@ -7,9 +7,9 @@ const swiper = new Swiper('.swiper', {
     delay: 0,
   },
   speed: 6000,  
-  slidesPerView: "auto",
+  slidesPerView: 2,
   freeMode: true,
-  spaceBetween: 15,
+  spaceBetween: 100,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',

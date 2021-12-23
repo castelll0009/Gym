@@ -37,8 +37,11 @@
   }
 
   .swiper-slide {
-    width: 80%;
+    width: 100%;
   }
+ .swiper-pagination{
+   color: white !important;
+ }
 
   .swiper-slide:nth-child(2n) {
     width: 60%;

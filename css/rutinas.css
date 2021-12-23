@@ -15,20 +15,21 @@
 	text-align: center;
 	width: 100%;
 }
-.figure-container-rutinas{			
+.figure-container-rutinas{		
 	position: relative;
 	background-color: rgb(0, 0, 0);
 	border-color: rgb(0, 0, 0);
 	border-radius: 2%;
 	border: 2px solid  #196DE9;
-	min-width: 300px;	
-	max-width: 300px;
+	min-width: 200px;	
+	max-width: 200px;
 	min-height: 100px;
 	max-height: max-content;
     width: max-content;
     height: max-content;	
 	overflow: hidden;	
 	display: block;
+	padding: 0;
 	margin: auto;
 }
 
