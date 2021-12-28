@@ -1,0 +1,40 @@
+body {
+    background-image: url("../imgs/portada-gym.webp");
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+	background-size: cover;
+}
+.formulario {
+    background-color: rgba(128, 0, 128, 0.26); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #196ce97c,#502a914b, #00000010);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff!important;
+}
+.form-control {
+    background-color: rgba(0,0,0,0.6)!important;
+    color: #fff!important;
+    border: none!important;
+}
+.iti {
+    width: 100%!important;
+}
+/*.iti__country-list {
+    background-color: #000!important;
+}*/
+.option {
+    margin-left: 1.5rem!important;
+    margin-right: 1.5rem!important;
+}
+.br {
+    align-items: center;
+    border-bottom: 1px solid #000;
+    display: flex;
+    text-align: center;
+}
+.second {
+    border: 0.1px solid #fff;
+}
+b {
+    font-size: .700rem;
+}

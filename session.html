@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/session.css">
+    <!-- BOOTSTRAP 4 LUX -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center pt-5 mt-5">
+            <div class="col-md-4 formulario">
+                <form id="session-form" class="mx-4" action="">
+                    <div class="form-group text-center pt-3">
+                        <h3 class="text-light">Iniciar Sesión</h2>
+                    </div>
+
+                    <div class="form-group pt-3">
+                        <input id="user" type="text" class="form-control" placeholder="Usuario">
+                    </div>
+                    
+                    <div class="form-group pb-3">
+                        <input id="password" type="password" class="form-control" placeholder="Contraseña">
+                    </div>
+                
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-block text-center">
+                            Iniciar Sesión
+                        </button>
+                        <!--<span href="#">Olvide mi contraseña</span>-->
+                    </div>
+                </form>
+
+                <div class="option">
+                    <div class="br pt-3">
+                    </div>
+                    
+                    <div class="text-center pt-1 pb-1">
+                        <b>¿Eres nuevo?</b>
+                        <a id="second-btn" href="registro.html" class="second btn btn-block text-center text-light mt-3">
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/session.js"></script>
+</body>
+</html>

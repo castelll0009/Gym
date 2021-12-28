@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/session.css">
+    <!-- BOOTSTRAP 4 LUX -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <!-- PHONE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center pt-5 mt-5 mb-5">
+            <div class="col-md-4 formulario">
+                <form id="register-form" class="mx-4" action="">
+                    <div class="form-group text-center pt-3">
+                        <h3 class="text-light">Creando Cuenta</h2>
+                    </div>
+
+                    <div class="form-group pt-3">
+                        <input id="name" type="text" class="form-control" placeholder="Nombres">
+                    </div>
+
+                    <div class="form-group">
+                        <input id="last_n" type="text" class="form-control" placeholder="Apellidos">
+                    </div>
+
+                    <div class="form-group">
+                        <input id="phone" id="phone" type="tel" class="form-control" placeholder="Teléfono">
+                    </div>
+
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control" placeholder="Correo electrónico">
+                    </div>
+
+                    <div class="form-group pt-3">
+                        <input id="user" type="text" class="form-control" placeholder="Nombre de Usuario">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input id="password" type="password" class="form-control" placeholder="Contraseña">
+                    </div>
+                    
+                    <div class="form-group pb-3">
+                        <input id="conf" type="password" class="form-control" placeholder="Confirme su Contraseña">
+                    </div>
+                
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-block text-center">
+                            Registrarse
+                        </button>
+                        <!--<span href="#">Olvide mi contraseña</span>-->
+                    </div>
+                </form>
+
+                <div class="option">
+                    <div class="br pt-3">
+                    </div>
+                    
+                    <div class="text-center pt-1 pb-1">
+                        <b>¿Estas registrado?</b>
+                        <a isd="second-btn" href="session.html" class="second btn btn-block text-center text-light mt-3">
+                            Iniciar Sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+</body>
+</html>
