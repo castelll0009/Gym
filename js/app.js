@@ -14,21 +14,7 @@ $(document).ready(function() {
       $.ajax({
         url: 'backend/gym_usuariosSearch.php',        
         type: 'POST',
-        data: {search}, //podemos enviar string , objetos
-        /*success: function (response) {
-          console.log(response);        
-          if(!response.error) {
-            let products = JSON.parse(response);
-            let template = '';
-            products.forEach(product => {
-              template += `
-                     <li><a href="#" class="product-item">${product.nombre}</a></li>
-                    ` 
-            });
-            $('#product-result').show();
-            $('#container').html(template);
-          }
-        }*/
+        data: {search}, 
         success: function(response) {
           const users = JSON.parse(response);
           let template = '';
@@ -171,6 +157,11 @@ $(document).ready(function() {
       });
     }
   });
+
+  ///comparar si existe este mismo nombre
+  
+
+ 
 
   // Show a USer Listed Selected in Formulary
   $(document).on('click', '.user-item', function() {
