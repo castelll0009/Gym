@@ -48,21 +48,19 @@
 	border: 1px solid #ffffff;	
 	min-width: 70px;
 	min-height: 70px;
-	border-radius: 5%;
+	border-radius: 5%;	
+	position: relative;	
 	display: block;
-	position: relative;
-	margin: 0;
-	padding: 0	;
-	margin-left: 8px;
+	margin: auto;	
 }
-.span-cont-icono i{	
+.span-cont-icono:hover{
+	box-shadow: 0px 0px 30px 0px; 	
+}
+.span-cont-icono i{		
 	font-size: 2em;
-	min-width: 70px;
-	min-height: 70px;	
-	position: absolute;
-	top: 28%;
-	left: 1%;	
-	
+	min-width: max-content;
+	min-height: max-content;		
+   	padding-top: 10px;				
 }
 	
 .icono-rutinas{		
@@ -75,22 +73,15 @@
 }
 /*RESOLUCION MOVIL*/
 @media screen and (max-width: 700px){	 
-	.span-cont-icono{
-		background-color: aliceblue;
-		border: 1px solid #ffffff;	
+	.span-cont-icono{		
 		min-width: 55px;
 		max-width: 55px;
 		min-height: 55px;
-		border-radius: 5%;
-		display: block;
-		position: relative;
+		border-radius: 5%;			
+		position: relative;	
 	}
 	.span-cont-icono i{	
-		font-size: 2em;
-		min-width: 50px;		
-		position: absolute;
-		top: 10px;
-		left: 2.33px;	
+	
 		
 	}
 }
