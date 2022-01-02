@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Alterno App</title>
+    <!-- BOOTSTRAP 4 LUX -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- NAVIGATION  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+      <div class="contenedor-img">
+        <img  id="zumbido" class="img-logo" style="width: 50px;" src="logo.png">
+      </div>
+      <a class="navbar-brand" style="user-select: none;">Alterno - Administración (Productos)</a>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Principal
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin_ventas.html">Ventas</a>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0">
+              <input name="search" id="search" class="form-control mr-sm-2" type="search" placeholder="Nombre del Producto" aria-label="Search">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row p-4">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <!-- FORM TO ADD PRODUCTS -->
+              <form id="product-form">
+
+                <div class="form-group">
+                  <h5 id="name-action">Nuevo producto</h5>
+                </div>
+                <input name='productId' type='hidden' id='productId'>
+                <div class="form-group">
+                  <input type="text" id="name" placeholder="Nombre" class="form-control" required="required">
+                </div>
+                <div class="form-group">
+                  <input type="number" min="0" step="50" id="price" placeholder="Precio" class="form-control" required="required">
+                </div>
+                <div class="form-group">
+                  <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Descripción" required="required" style="height: 150px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <button id="collapse-btn" type="button" class="btn btn-block text-left dropdown-toggle" data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm"> 
+                    Ver más opciones... 
+                  </button>
+                </div>
+                <div id="collapseForm" class="collapse in">
+                  <div class="form-group">
+                    <textarea id="properties" cols="30" rows="10" class="form-control" placeholder="Propiedades" style="height: 150px;"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea id="uses" cols="30" rows="10" class="form-control" placeholder="Usos" style="height: 150px;"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea id="recipes" cols="30" rows="10" class="form-control" placeholder="Recetas" style="height: 150px;"></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block text-center">
+                  Guardar
+                </button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLE  -->
+        <div class="col-md-7">
+          <!-- RESULTADOS DE PRUEBA -->
+          <div class="card my-4" id="product-result">
+            <div class="card-body">
+              <!-- SEARCH -->
+              <ul id="container"></ul>
+            </div>
+          </div>
+          
+
+          <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Precio</td>
+                <td>Description</td>
+                <td>Propiedades</td>
+                <td>Usos</td>
+                <td>Recetas</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody id="products"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <!-- Frontend Logic -->
+    <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+</html>
