@@ -5,7 +5,19 @@
     background-color: blue;
     position: absolute;
     z-index: 100;
+  
+
 }
 .mostrar-interfaz-QR{
     display: block;    
+}
+
+.cont-imagen-medalla{
+    min-width: 200px;    
+    max-width: 200px;     
+    display:  flex;
+    display:  block;
+    margin: auto;
+    align-content: center;
+    text-align:  center;
 }
