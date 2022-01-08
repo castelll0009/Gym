@@ -79,7 +79,7 @@ $(document).ready(function() {
                     </td>                   
                     <td>${user.contrasena}</td>
                     <td>${user.telefono}</td>                    
-                    <td>${user.nom_entero}</td>                                                          
+                    <td>${user.name}</td>                                                          
                     <td>${user.correo}</td>
                     <td>${user.dias_asistidos}</td>
                     <td>
@@ -122,15 +122,12 @@ $(document).ready(function() {
       nombre_usuario: $('#nombre_usuario').val(),
       contrasena: $('#contrasena').val(),
       telefono: $('#telefono').val(),
-      nombre: $('#nombre').val(),
-      cedula: $('#cedula').val(),
-      nivel: $('#nivel').val(),
-      correo: $('#correo').val(),
-      cantidad_dias_asistidos: $('#cantidad_dias_asistidos').val()
+      nombre: $('#nombre').val(),            
+      correo: $('#correo').val(),      
     };
-    console.log(postData.id);
+    console.log("NOMBREEE A GUARDARSS" + postData.nombre_usuario);
     const url = edit === false ? 'backend/gym_usuariosAdd.php' : 'backend/gym_usuarioEdit.php';
-    console.log(postData, url);
+    console.log(postData, url); 
     $.post(url, postData, (response) => {
       edit=false;
       console.log(response);

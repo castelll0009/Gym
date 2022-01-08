@@ -15,7 +15,7 @@
     $json[] = array(
       'nombre_usuario' => $row['nombre_usuario'],
       'contrasena' => $row['contrasena'], 
-      'nom_entero' => $row['nom_entero'],          
+      'name' => $row['nombre_completo'],          
       'telefono' => $row['telefono'],                              
       'correo' => $row['correo'],
       'dias_asistidos' => $row['dias_asistidos'],
