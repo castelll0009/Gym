@@ -57,6 +57,7 @@ $(document).ready(function() {
 
   // Fetching Products
   function fetchUsers() {
+    alert("si resta  entrando")    ;
     $.ajax({
       url: 'backend/gym_usuariosList.php',
       type: 'GET',

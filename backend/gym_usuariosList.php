@@ -17,7 +17,7 @@
       'contrasena' => $row['contrasena'],      
       'telefono' => $row['telefono'],   
       'nombre' => $row['nombre'],         
-      'cedula' => $row['cedula'],  
+      /*'cedula' => $row['cedula'],  */
       'nivel' => $row['nivel'],
       'correo' => $row['correo'],
       'cantidad_dias_asistidos' => $row['cantidad_dias_asistidos'],
