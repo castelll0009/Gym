@@ -57,12 +57,12 @@ $(document).ready(function() {
 
   // Fetching Products
   function fetchUsers() {
-    alert("si resta  entrando")    ;
+    console.log("entrando en funcion ENLISTAR");
     $.ajax({
       url: 'backend/gym_usuariosList.php',
       type: 'GET',
       success: function(response) {
-        console.log("response"+response); 
+        console.log("response de AJAXXXXX" + response); 
         const users = JSON.parse(response);
         let template = '';
       //  let template_nuevo_producto = '';
@@ -78,12 +78,10 @@ $(document).ready(function() {
                     </a>
                     </td>                   
                     <td>${user.contrasena}</td>
-                    <td>${user.telefono}</td>
-                    <td>${user.nombre}</td>
-                    <td>${user.cedula}</td>
-                    <td>${user.nivel}</td>
+                    <td>${user.telefono}</td>                    
+                    <td>${user.nom_entero}</td>                                                          
                     <td>${user.correo}</td>
-                    <td>${user.cantidad_dias_asistidos}</td>
+                    <td>${user.dias_asistidos}</td>
                     <td>
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
