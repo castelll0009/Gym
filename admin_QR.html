@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Admin GYM App</title>
+    <title>Admin GYM App</title>    
+    <link rel="stylesheet" href="css/QR.css">	
     <!-- BOOTSTRAP 4 LUX -->
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <!-- FONT AWESOME -->
@@ -48,7 +49,26 @@
     </nav>
     
     <main>
+      <div class="container-fluid">
+        <div class="text-center">
+          <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+               class="qr-code img-thumbnail img-responsive">
+        </div>
       
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="content">Content:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="content" placeholder="Enter content">
+            </div>
+          </div>
+          <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" class="btn btn-default" id="generate">Generate</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     
@@ -57,7 +77,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <!-- Frontend Logic -->
-    <script src="js/app.js"></script>
+    <script src="js/QR.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
