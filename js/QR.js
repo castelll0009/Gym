@@ -13,7 +13,8 @@ const  run = async() => {
 }
 run()
 */
-alert("entrando  ala  funcion");
+
+generarQR();
 //codigo para generar QR , codificando el QR
 function  generarQR(){
     alert("entrando  ala  funcion");
