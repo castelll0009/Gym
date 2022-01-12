@@ -1,35 +1,14 @@
-//Generar QR  con nodejs
-/* 
-const fs = require("fs"); //acedemos  a files sistem
-const qrcode = require("qrcode"); //modulo para generar QR
-
-const urlCv = "wwww";
-const  run = async() => {
-    const QR= await qrcode.toDataURL(urlCv)
-    const htmlContent= `
-    <img src="${QR}">
-    `;
-    fs.writeFileSync('./index-prueba.html', `${htmlContent}`)    
-}
-run()
-*/
-
-/*
-if( obtenerHoraActual() >= hora_para_generar_primer_qr && obtenerHoraActual() < hora_para_generar_segundo_qr){
-    //estamos en la mañana
-    generarQR();
-    guardar_qr_base_datos();                
-} 
-*/ 
-
-
+var hora_para_generar_qr_manana = "0:0:0"; 
+var hora_para_generar_qr_tarde = "12:0:0";
 var hoy = new Date();   
 
-function obtenerFechaActual(){         
-    return fechaHoy = hoy.getFullYear() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getDate();   
+function obtenerFechaActual(){ 
+    let varHoy = new Date();          
+    return  varHoy.getFullYear() + '-' + (varHoy.getMonth() + 1) + '-' + varHoy.getDate();   
 }
-function obtenerHoraActual(){         
-    return  hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();   
+function obtenerHoraActual(){  
+    let diahoy = new Date();        
+    return  diahoy.getHours() + ':' + diahoy.getMinutes() + ':' + diahoy.getSeconds();   
 }
  //examinar cada 2 segundos si se debe cambiar el QR, segun la hora
 
@@ -41,8 +20,7 @@ function obtenerHoraActual(){
 */
 generar_qr_si_no_se_ha_generado_hoy();
 
-var hora_para_generar_qr_manana = "1:57:0"; 
-var hora_para_generar_qr_tarde = "12:0:0";
+
 setInterval(        
     function(){         
         generar_qr_ala_hora(hora_para_generar_qr_manana);
@@ -53,24 +31,29 @@ setInterval(
 
 var horaReferencia = "12:00"; // hora para controlar el acceso a la funcion generar hora
 function generar_qr_ala_hora(pHora){          
-    //rango de  hora        
+    //rango de  hora       
+    var horaActual;     
     var rangoMaxHora;    
     rangoMaxHora  = pHora.slice(0, -2);
     rangoMaxHora = rangoMaxHora + ':59';
-    alert("hora actual " + obtenerHoraActual() + " phora "+ pHora + " rango max:"+rangoMaxHora);
-    if(obtenerHoraActual() >= pHora && obtenerHoraActual() < rangoMaxHora){                                    
+    //alert("hora actual " + obtenerHoraActual() + " phora "+ pHora + " rango max:"+rangoMaxHora);
+    if(obtenerHoraActual() >= pHora && obtenerHoraActual() < rangoMaxHora){                                
         //ENTRA SI LA HORA ACTUAL ESTA DENTRO DEL RANGO DE CAMBIO 
-        //alert("generando Qr a la hora");
+        //siempre debe generar un nuevo qr si estamos en hora de  cambio, 
+        //amenos que ya se haya generado
         $.post("backend/gym_obtener_ultimo_QR.php", (response) => {  
-            respuesta = JSON.parse(response); 
-            alert(respuesta[0].hora_generado);
-            if(respuesta[0].hora_generado >= pHora && respuesta[0].hora_generado < rangoMaxHora){
-                //ya se genero el QR de cambio
+            respuesta = JSON.parse(response);             
+            if(respuesta[0].hora_generado >= pHora){
+                //NO GENERAR
+                //ya se ha generad uno despues de la hora de cambio   
+                console.log("no generar ya se genero");
+                obtener_qr_desde_base_datos();
+                MostrarQR();    
             }else{
-                //no se ha generado QR de cambio
+                //debemos generar porque no se ha generado en la hora de cambio
                 generarQR(); 
-                guardar_qr_base_datos();                                    
-            }
+                guardar_qr_base_datos();   
+            }                                                     
         });              
     }else{     
         //alert("No entra");        
@@ -100,9 +83,15 @@ $(function() {
       
 });  
 
-function generarQR(){   
+function generarQR(){   //genera un QR nuevo con un numero random.
     //alert("generando");
     document.getElementById("content").value =  random(1,10000);
+    $(".qr-code").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + htmlEncode($("#content").val()) + "&chs=160x160&chld=L|0")            
+    //guardar el qr  en una variable entera        
+}
+function MostrarQR(){   //genera un QR nuevo con un numero random.
+    //alert("generando");
+    document.getElementById("content").value;
     $(".qr-code").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + htmlEncode($("#content").val()) + "&chs=160x160&chld=L|0")            
     //guardar el qr  en una variable entera        
 }
@@ -148,21 +137,48 @@ function generar_qr_si_no_se_ha_generado_hoy(){
     var respuesta;
     $.post("backend/gym_obtener_ultimo_QR.php", (response) => {  
         respuesta = JSON.parse(response); 
-        console.log(respuesta);
+        console.log(respuesta);        
         //alert(respuesta[0].fecha_generado);
         //alert(obtenerFechaActual());
         if(respuesta[0].fecha_generado != obtenerFechaActual()){              
             //se la fecha es diferente quiere decir que no se ha generado QR hoy                 
             //alert("no se ha generado hoy ");
             //si no se ha generado entonces identificamos si estamos en la mañana o en la tarde                      
+            console.log("no se ha generado hoy ");
             generarQR();
             guardar_qr_base_datos();                            
 
         }else{
             //si se ha generado un qr hoy puesto que las fechas coinciden                
-            //alert("YA se genero hoy ");       
+            //alert("YA se genero hoy ");      
+            console.log("YA SE HA GENERADO   hoy "); 
             obtener_qr_desde_base_datos();
             generarQR();
         }
     }); 
 }
+
+///////////////////////////
+//Generar QR  con nodejs
+/* 
+const fs = require("fs"); //acedemos  a files sistem
+const qrcode = require("qrcode"); //modulo para generar QR
+
+const urlCv = "wwww";
+const  run = async() => {
+    const QR= await qrcode.toDataURL(urlCv)
+    const htmlContent= `
+    <img src="${QR}">
+    `;
+    fs.writeFileSync('./index-prueba.html', `${htmlContent}`)    
+}
+run()
+*/
+
+/*
+if( obtenerHoraActual() >= hora_para_generar_primer_qr && obtenerHoraActual() < hora_para_generar_segundo_qr){
+    //estamos en la mañana
+    generarQR();
+    guardar_qr_base_datos();                
+} 
+*/ 
