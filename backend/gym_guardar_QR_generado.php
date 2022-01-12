@@ -6,7 +6,8 @@
         $hora_generado = $_POST['hora_generado'];                                      
         $fecha_generado = $_POST['fecha_generado'];  
 
-        $query = "INSERT into tbl_gym_QR(codigo_QR_entero, fecha_generado, hora_generado)VALUES('$codigo_QR_entero','$fecha_generado','$hora_generado')";        
+        $query = "INSERT into tbl_gym_QR(codigo_QR_entero, fecha_generado, hora_generado)
+        VALUES('$codigo_QR_entero','$fecha_generado','$hora_generado')";        
         
         $result = mysqli_query($connection, $query);
         if(!$result) {
