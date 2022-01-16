@@ -46,11 +46,11 @@ function generar_qr_ala_hora(pHora){
             if(respuesta[0].hora_generado >= pHora){
                 //NO GENERAR
                 //ya se ha generad uno despues de la hora de cambio   
-                console.log("no generar ya se genero");
+                console.log("no generar ya se genero");                
                 obtener_qr_desde_base_datos();
                 MostrarQR();    
             }else{
-                //debemos generar porque no se ha generado en la hora de cambio
+                //debemos generar porque no se ha generado en la hora de cambio                
                 generarQR(); 
                 guardar_qr_base_datos();   
             }                                                     
@@ -153,7 +153,7 @@ function generar_qr_si_no_se_ha_generado_hoy(){
             //alert("YA se genero hoy ");      
             console.log("YA SE HA GENERADO   hoy "); 
             obtener_qr_desde_base_datos();
-            generarQR();
+            MostrarQR();
         }
     }); 
 }
