@@ -48,7 +48,7 @@ function generar_qr_ala_hora(pHora){
                 //ya se ha generad uno despues de la hora de cambio   
                 console.log("no generar ya se genero");                
                 obtener_qr_desde_base_datos();
-                MostrarQR();    
+                //MostrarQR();    
             }else{
                 //debemos generar porque no se ha generado en la hora de cambio                
                 generarQR(); 
@@ -91,7 +91,7 @@ function generarQR(){   //genera un QR nuevo con un numero random.
 }
 function MostrarQR(){   //genera un QR nuevo con un numero random.
     //alert("generando");
-    document.getElementById("content").value;
+    document.getElementById("content").value;           
     $(".qr-code").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + htmlEncode($("#content").val()) + "&chs=160x160&chld=L|0")            
     //guardar el qr  en una variable entera        
 }
@@ -126,7 +126,8 @@ function obtener_qr_desde_base_datos(){
             datosQR = JSON.parse(response); 
             console.log(datosQR);                             
             //mostramos en el input html el codigo                    
-            document.getElementById("content").value = datosQR[0].codigo_QR_entero;             
+            document.getElementById("content").value = datosQR[0].codigo_QR_entero;                    
+            MostrarQR();
         }
         
     });   
@@ -152,8 +153,7 @@ function generar_qr_si_no_se_ha_generado_hoy(){
             //si se ha generado un qr hoy puesto que las fechas coinciden                
             //alert("YA se genero hoy ");      
             console.log("YA SE HA GENERADO   hoy "); 
-            obtener_qr_desde_base_datos();
-            MostrarQR();
+            obtener_qr_desde_base_datos();            
         }
     }); 
 }
