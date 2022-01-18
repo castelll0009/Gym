@@ -2,7 +2,7 @@ header{
     font-family: 'Roboto', sans-serif; 
     width: 100%;   
     display: block;       
-    z-index: 10000;  
+    z-index: 1;  
     height: max-content;              
     background: white;      
     font-size: 1em;    
