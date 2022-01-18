@@ -1,4 +1,15 @@
+.div-escanear-QR{
+    text-align: center;
+    align-items: center;   
+    color: white; 
+    padding: 10px;
+}
 .variables-para-ganar-exp{
     font-size: 0.9em;
-    color: #E4C769;
+    color: #E4C769;    
+}
+
+.interfaz-qr-title-nivel{
+    font-size: 1em;
+    
 }
