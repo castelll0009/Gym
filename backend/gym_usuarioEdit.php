@@ -7,7 +7,7 @@
         $telefono = $_POST['telefono'];
         $nombre = $_POST['nombre'];
         $correo = $_POST['correo'];        
-        $cantidad_dias_asistidos = $_POST['dias_asistidos'];        
+        $cantidad_dias_asistidos = $_POST['dias_asistidos'];       
 
 
         $query = "UPDATE tbl_gym_usuario SET nombre_usuario = '$nombre_usuario', telefono = '$telefono', nombre = '$nombre', correo = '$correo', dias_asistidos = '$dias_asistidos' WHERE id = '$id'";

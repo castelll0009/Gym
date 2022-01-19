@@ -28,11 +28,8 @@ $(document).ready(function() {
                        ${user.nombre_usuario} 
                       </a>
                    </td>                   
-                    <td>${user.contrasena}</td>
                     <td>${user.telefono}</td>
                     <td>${user.name}</td>
-                    <td>${user.cedula}</td>
-                    <td>${user.nivel}</td>
                     <td>${user.correo}</td>
                     <td>${user.dias_asistidos}</td>
                    <td>
@@ -72,10 +69,11 @@ $(document).ready(function() {
           template += `
                   <tr id="${user.id}">
                     <td>${user.id}</td>
-                    <td>${user.telefono}</td>                    
-                    <td>${user.nombre}</td>                                                          
+                    <td>${user.telefono}</td>   
+                                
+                    <td>${user.nombre_usuario}</td>     
                     <td>${user.correo}</td>
-                    <td>
+  
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
                       </a>
@@ -98,9 +96,7 @@ $(document).ready(function() {
                   </div>															
                   <!-- contenedor de  los items del menu-->																		
 			        	</figure>                
-               `*/
-
-        });
+               `*/ });
         $('#users').html(template);
         //$('#cards-container-mysql').html(template_nuevo_producto);       
       }
@@ -115,7 +111,7 @@ $(document).ready(function() {
       nombre_usuario: $('#nombre_usuario').val(),
      // contrasena: $('#contrasena').val(),
       telefono: $('#telefono').val(),
-      nombre: $('#nombre').val(),            
+      name: $('#nombre').val(),            
       correo: $('#correo').val(),      
     };
     console.log("NOMBREEE A GUARDARSS" + postData.nombre_usuario);

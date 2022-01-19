@@ -41,7 +41,7 @@
             */
       
         $query = "INSERT into tbl_gym_usuario(id,nombre_usuario, telefono, nombre, correo) 
-        VALUES ('$id','$nombre_usuario','$contrasena','$telefono','$nombre','$correo')";
+        VALUES ('$id','$nombre_usuario','$telefono','$nombre','$correo')";
         
         $result = mysqli_query($connection, $query);
         if(!$result) {
