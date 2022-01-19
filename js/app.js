@@ -30,11 +30,11 @@ $(document).ready(function() {
                    </td>                   
                     <td>${user.contrasena}</td>
                     <td>${user.telefono}</td>
-                    <td>${user.nombre}</td>
+                    <td>${user.name}</td>
                     <td>${user.cedula}</td>
                     <td>${user.nivel}</td>
                     <td>${user.correo}</td>
-                    <td>${user.cantidad_dias_asistidos}</td>
+                    <td>${user.dias_asistidos}</td>
                    <td>
                         <a class="btn btn-secondary">
                           <i class="fas fa-cog"></i>
@@ -72,16 +72,9 @@ $(document).ready(function() {
           template += `
                   <tr id="${user.id}">
                     <td>${user.id}</td>
-                    <td>
-                    <a href="#" class="user-item">
-                      ${user.nombre_usuario} 
-                    </a>
-                    </td>                   
-                    <td>${user.contrasena}</td>
                     <td>${user.telefono}</td>                    
-                    <td>${user.name}</td>                                                          
+                    <td>${user.nombre}</td>                                                          
                     <td>${user.correo}</td>
-                    <td>${user.dias_asistidos}</td>
                     <td>
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
@@ -120,7 +113,7 @@ $(document).ready(function() {
     const postData = {
       id: $('#id').val(),
       nombre_usuario: $('#nombre_usuario').val(),
-      contrasena: $('#contrasena').val(),
+     // contrasena: $('#contrasena').val(),
       telefono: $('#telefono').val(),
       nombre: $('#nombre').val(),            
       correo: $('#correo').val(),      
@@ -171,11 +164,9 @@ $(document).ready(function() {
         //console.log(user);
         $('#id').val(user.id);
         $('#nombre_usuario').val(user.nombre_usuario);
-        $('#contrasena').val(user.contrasena);
         $('#telefono').val(user.telefono);
         $('#nombre').val(user.nombre);
-        $('#cedula').val(user.nombre);
-        $('#nivel').val(user.nivel);
+
         $('#correo').val(user.correo);
         $('#cantidad_dias_asistidos').val(user.cantidad_dias_asistidos);
         //title action

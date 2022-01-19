@@ -14,14 +14,11 @@
         $json = array();
         while($row = mysqli_fetch_array($result)) {
             $json[] = array(
-                'nombre_usuario' => $row['nombre_usuario'],
-                'contrasena' => $row['contrasena'],      
+                'nombre_usuario' => $row['nombre_usuario'],      
                 'telefono' => $row['telefono'],   
-                'nombre' => $row['nombre'],         
-                'cedula' => $row['cedula'],  
-                'nivel' => $row['nivel'],
+                'name' => $row['nombre'],         
                 'correo' => $row['correo'],
-                'cantidad_dias_asistidos' => $row['cantidad_dias_asistidos'],
+                'dias_asistidos' => $row['dias_asistidos'],
                 'id' => $row['id']
              );
         }

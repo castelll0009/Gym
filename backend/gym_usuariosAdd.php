@@ -5,7 +5,7 @@
     if(isset($_POST['id'])){
         $id = $_POST['id'];
         $nombre_usuario = $_POST['nombre_usuario'];
-        $contrasena = $_POST['contrasena'];
+      //  $contrasena = $_POST['contrasena'];
         $telefono = $_POST['telefono'];
         $nombre = $_POST['nombre'];                
         $correo = $_POST['correo'];               
@@ -40,7 +40,7 @@
            
             */
       
-        $query = "INSERT into tbl_gym_usuario(id,nombre_usuario, contrasena, telefono, nombre_completo, correo) 
+        $query = "INSERT into tbl_gym_usuario(id,nombre_usuario, telefono, nombre, correo) 
         VALUES ('$id','$nombre_usuario','$contrasena','$telefono','$nombre','$correo')";
         
         $result = mysqli_query($connection, $query);
