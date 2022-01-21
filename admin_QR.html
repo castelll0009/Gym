@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin GYM App</title>    
+    <link rel="stylesheet" href="css/QR.css">	
+    <!-- BOOTSTRAP 4 LUX -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- NAVIGATION  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+      <div class="contenedor-img">
+        <img  id="zumbido" class="img-logo" style="width: 50px;" src="logo.png">
+      </div>
+      <a class="navbar-brand" style="user-select: none;">Alterno - Administración (Productos)</a>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Principal
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin_QR.html">Admin QR</a>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0">
+              <input name="search" id="search" class="form-control mr-sm-2" type="search" placeholder="Nombre del Producto" aria-label="Search">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+      </div>
+    </nav>
+    
+    <main>
+      <div class="container-fluid">
+        <div class="text-center">
+          <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+               class="qr-code img-thumbnail img-responsive">
+        </div>
+      
+        <div class="form-horizontal">
+          <div class="form-group"> 
+            <label class="control-label col-sm-2" for="content">Content:</label>
+            <div name="inputQR" class="col-sm-10">
+              <input type="text"  class="form-control" id="content" placeholder="Enter content">
+            </div>
+          </div>
+          <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" class="btn btn-default" id="generate">Generate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <!-- Frontend Logic -->
+    <script src="js/QR.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+</html>

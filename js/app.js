@@ -1,20 +1,7 @@
 $(document).ready(function() {
   // Global Settings
   let edit = false;
-  mostrarDatos();
 
-  function mostrarDatos() {
-    let id = 12349;
-    $.post('backend/gym_usuariosSingle.php', {id}, function(response){        
-      //console.log("USARIOOOOOOOOO INTERFAZ"+response);         
-      const user = JSON.parse(response);           
-      //console.log(user);      
-      $('.nombre-usuario').html(user.nombre_usuario);      
-      $('.nivel-fit').html(user.nivel);      
-      //title action
-      //document.getElementById('name-action').innerHTML = 'Edit User';
-   })    
-  };
   // Testing Jquery
   console.log('jquery is working!');
   fetchUsers();
@@ -27,21 +14,7 @@ $(document).ready(function() {
       $.ajax({
         url: 'backend/gym_usuariosSearch.php',        
         type: 'POST',
-        data: {search}, //podemos enviar string , objetos
-        /*success: function (response) {
-          console.log(response);        
-          if(!response.error) {
-            let products = JSON.parse(response);
-            let template = '';
-            products.forEach(product => {
-              template += `
-                     <li><a href="#" class="product-item">${product.nombre}</a></li>
-                    ` 
-            });
-            $('#product-result').show();
-            $('#container').html(template);
-          }
-        }*/
+        data: {search}, 
         success: function(response) {
           const users = JSON.parse(response);
           let template = '';
@@ -84,11 +57,12 @@ $(document).ready(function() {
 
   // Fetching Products
   function fetchUsers() {
+    console.log("entrando en funcion ENLISTAR");
     $.ajax({
       url: 'backend/gym_usuariosList.php',
       type: 'GET',
       success: function(response) {
-        console.log("response"+response); 
+        console.log("response de AJAXXXXX" + response); 
         const users = JSON.parse(response);
         let template = '';
       //  let template_nuevo_producto = '';
@@ -104,12 +78,10 @@ $(document).ready(function() {
                     </a>
                     </td>                   
                     <td>${user.contrasena}</td>
-                    <td>${user.telefono}</td>
-                    <td>${user.nombre}</td>
-                    <td>${user.cedula}</td>
-                    <td>${user.nivel}</td>
+                    <td>${user.telefono}</td>                    
+                    <td>${user.name}</td>                                                          
                     <td>${user.correo}</td>
-                    <td>${user.cantidad_dias_asistidos}</td>
+                    <td>${user.dias_asistidos}</td>
                     <td>
                       <a class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
@@ -150,15 +122,12 @@ $(document).ready(function() {
       nombre_usuario: $('#nombre_usuario').val(),
       contrasena: $('#contrasena').val(),
       telefono: $('#telefono').val(),
-      nombre: $('#nombre').val(),
-      cedula: $('#cedula').val(),
-      nivel: $('#nivel').val(),
-      correo: $('#correo').val(),
-      cantidad_dias_asistidos: $('#cantidad_dias_asistidos').val()
+      nombre: $('#nombre').val(),            
+      correo: $('#correo').val(),      
     };
-    console.log(postData.id);
+    console.log("NOMBREEE A GUARDARSS" + postData.nombre_usuario);
     const url = edit === false ? 'backend/gym_usuariosAdd.php' : 'backend/gym_usuarioEdit.php';
-    console.log(postData, url);
+    console.log(postData, url); 
     $.post(url, postData, (response) => {
       edit=false;
       console.log(response);
@@ -184,6 +153,11 @@ $(document).ready(function() {
       });
     }
   });
+
+  ///comparar si existe este mismo nombre
+  
+
+ 
 
   // Show a USer Listed Selected in Formulary
   $(document).on('click', '.user-item', function() {
