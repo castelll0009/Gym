@@ -1,3 +1,7 @@
+
+//ESCANEAR  QR///
+
+
 var boton_QR_icono = document.querySelector("#icono-QR");
 var div_escanner_QR = document.querySelector(".div-escanear-QR");
 
@@ -178,6 +182,7 @@ function generar_qr_si_no_se_ha_generado_hoy(){
         }
     }); 
 }
+
 
 ///////////////////////////
 //Generar QR  con nodejs

@@ -8,7 +8,6 @@
   
 
 }
-
 .mostrar-interfaz-QR{
     display: block;    
 }
@@ -21,4 +20,9 @@
     margin: auto;
     align-content: center;
     text-align:  center;
+}
+
+/*interfaz escanear con CAMARA  QR*/
+.div-interfaz-scanear-camara{
+    
 }
