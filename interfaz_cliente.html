@@ -43,14 +43,51 @@
 	</head>
 
 	<body>
-		<div class="div-escanear-QR">
-
+		<div class="div-escanear-QR">			
 			<div class="div-interfaz-scanear-camara">
 				<h1 id="titulo-interfaz-scanear-camara">Escanee el QR para incrementar tus puntos 
 					de entrenamiento!
-				</h1>
-					
+				</h1>					
 			</div>
+
+			<div class="container-fluid">
+				<div class="row justify-content-center aling-items-center vh-100">
+					<h1 style="text-align: center;">Como escanear Qr usando Html5</h1>
+					<div >
+						<video id="previsualizacion" class="p-1 border" style="width:100%" src=""></video>
+					</div>
+				</div>
+			</div>
+
+			<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+			<script type ="text/javascript">
+				//var sonido = new Audio(Barbacone.wav);
+				var scanner = new Instascan.Scanner({
+					video: document.getElementById("previsualizacion"),
+					scanPeriod: 5,
+					mirror: false
+
+				});
+				
+				Instascan.Camera.getCameras().then(function(cameras){
+					if (cameras.length > 0){
+						scanner.start(cameras[0]);
+					}else{
+						console.error("No se han encontrado cameras");
+						alert("Cameras no encontradas");
+					}
+				
+				}).catch(function(e){
+					console.error(e);
+					alert("ERROR" + e);					
+				});
+				
+				scanner.addListener("scan", function(respuesta){
+					//sonido.play();
+					console.log("CONTENIDO" + respuesta);
+				});				
+			</script>
 
 			<div class="cont-imagen-medalla">
 				<img src="./imgs/principiante.png" >
