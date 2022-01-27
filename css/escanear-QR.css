@@ -1,3 +1,18 @@
+/*porncentaje de progreso*/
+.cont-porcentaje-progreso{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+}
+.cont-porcentaje-progreso p{
+  margin-bottom: 0;
+  color: white ;
+}
+
+
+
 /*imagen de perfil en circulo progreso*/
 .cont-img-perfil-interfaz-QR{
   position: absolute;
@@ -10,11 +25,6 @@
   margin: 5px;
   
 }
-
-
-
-
-
 #svg circle {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
