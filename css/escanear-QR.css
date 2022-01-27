@@ -1,3 +1,20 @@
+/*imagen de perfil en circulo progreso*/
+.cont-img-perfil-interfaz-QR{
+  position: absolute;
+  top: 0;
+  border-radius: 100%;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 180px;
+  margin: 5px;
+  
+}
+
+
+
+
+
 #svg circle {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
@@ -8,6 +25,7 @@
   stroke: #FF9F1E;
 }
 #cont {
+  color: red;
   display: block;
   height: 200px;
   width: 200px;
@@ -23,8 +41,8 @@
   width: 160px;
   left: 50%;
   top: 50%;
-  box-shadow: inset 0 0 1em black;
-  content: attr(data-pct)"%";
+  box-shadow: inset 0 0 1em black;   
+  /*content: attr(data-pct)"%";*/
   margin-top: -80px;
   margin-left: -80px;
   border-radius: 100%;

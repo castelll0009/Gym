@@ -92,12 +92,16 @@ header{
 }
 .fa-star{
     min-width: 15px;         
-    max-width: 15x;    
+    max-width: 15px;    
 }
 .img-medalla{         
-    min-width: 100px;         
-    max-width: 100px;    
+    min-width: 30px;         
+    max-width: 30px;    
     
+}
+.img-medalla1{
+    min-width: 100px;
+    max-width: 100px;
 }
 
 .nivel-fit{
