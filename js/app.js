@@ -168,7 +168,7 @@ $(document).ready(function() {
     });
   });
 
-  // Delete a Single Product
+  // Delete a Single Product recuperada 
   $(document).on('click', '.user-delete', function() {
     if(confirm('¿Seguro que quieres eliminar este producto?')) {
       let element = $(this)[0].parentElement.parentElement;
